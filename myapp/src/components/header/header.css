@@ -1,0 +1,40 @@
+.app_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 4px 4px 4px #ccc;
+}
+
+.app_logo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.app_logo {
+  height: 50px;
+}
+.app_title {
+  font-size: 32px;
+  color: teal;
+}
+
+.app_navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.app_navbar a {
+  text-decoration: none;
+  padding: 8px;
+  color: salmon;
+  border-radius: 4px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.app_navbar a:hover {
+  background-color: rgb(250, 223, 221);
+}
