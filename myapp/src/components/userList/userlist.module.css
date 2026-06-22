@@ -1,0 +1,36 @@
+.userList {
+  display: flex;
+  flex-direction: column;
+  margin: 40px auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.heading {
+  font-size: 30px;
+  color: teal;
+}
+.studentsImg {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.85;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.studentsImg:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
