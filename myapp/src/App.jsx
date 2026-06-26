@@ -1,4 +1,5 @@
 import "./App.css";
+import Banner from "./components/banner/banner";
 import Counter from "./components/counter";
 import Footer from "./components/footer";
 import Header from "./components/header";
@@ -12,6 +13,7 @@ function App() {
       <UserList />
       <Counter />
       <UserManagement />
+      <Banner />
       <Footer />
     </div>
   );
