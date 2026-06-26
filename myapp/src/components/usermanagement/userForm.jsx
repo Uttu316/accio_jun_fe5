@@ -1,13 +1,18 @@
-const UserForm = ({ userData, setUserData, onSave }) => {
+import styles from "./userForm.module.css";
+
+const UserForm = ({ userData, setUserData, editItem, onUpdate, onSave }) => {
   const onInput = (e) => {
     const { id, value } = e.target;
     setUserData((curr) => ({ ...curr, [id]: value }));
   };
   return (
-    <form>
-      <div>
-        <label htmlFor="name">Username</label>
+    <form className={styles.form}>
+      <div className={styles.field}>
+        <label className={styles.label} htmlFor="name">
+          Username
+        </label>
         <input
+          className={styles.input}
           value={userData.name}
           onChange={onInput}
           name="name"
@@ -15,10 +20,18 @@ const UserForm = ({ userData, setUserData, onSave }) => {
           placeholder="Enter user name"
         />
       </div>
-      <div>
-        <label htmlFor="role">Role</label>
-        <select value={userData.role} onChange={onInput} id="role" name="role">
-          <option disabled selected>
+      <div className={styles.field}>
+        <label className={styles.label} htmlFor="role">
+          Role
+        </label>
+        <select
+          className={styles.select}
+          value={userData.role}
+          onChange={onInput}
+          id="role"
+          name="role"
+        >
+          <option disabled value="">
             Select Role
           </option>
           <option value="admin">Owner</option>
@@ -26,9 +39,12 @@ const UserForm = ({ userData, setUserData, onSave }) => {
           <option value="guest">Guest</option>
         </select>
       </div>
-      <div>
-        <label htmlFor="email">Email</label>
+      <div className={styles.field}>
+        <label className={styles.label} htmlFor="email">
+          Email
+        </label>
         <input
+          className={styles.input}
           value={userData.email}
           onChange={onInput}
           type="email"
@@ -37,9 +53,12 @@ const UserForm = ({ userData, setUserData, onSave }) => {
           name="email"
         />
       </div>
-      <div>
-        <label htmlFor="feedback">Feedback</label>
+      <div className={styles.field}>
+        <label className={styles.label} htmlFor="feedback">
+          Feedback
+        </label>
         <textarea
+          className={styles.textarea}
           value={userData.feedback}
           onChange={onInput}
           id="feedback"
@@ -48,7 +67,16 @@ const UserForm = ({ userData, setUserData, onSave }) => {
         ></textarea>
       </div>
       <div>
-        <button onClick={onSave}>Save</button>
+        {editItem === null && (
+          <button className={styles.submitBtn} onClick={onSave}>
+            Save
+          </button>
+        )}
+        {editItem !== null && (
+          <button className={styles.submitBtn} onClick={onUpdate}>
+            Update
+          </button>
+        )}
       </div>
     </form>
   );
