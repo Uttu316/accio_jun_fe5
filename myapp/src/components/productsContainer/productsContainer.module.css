@@ -1,0 +1,32 @@
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1.5rem;
+}
+
+.statusMsg {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1rem;
+  color: #636e72;
+}
+
+.errorMsg {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 1rem;
+  color: #d63031;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
