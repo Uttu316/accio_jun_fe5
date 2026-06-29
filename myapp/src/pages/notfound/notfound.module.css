@@ -1,0 +1,133 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+}
+
+.errorCode {
+  font-size: 10rem;
+  font-weight: 900;
+  color: #0984e3;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 4px 4px 0 #dfe6e9;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.ghost {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: spook 2s ease-in-out infinite;
+}
+
+@keyframes spook {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(5deg) scale(1.05);
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.75rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #636e72;
+  max-width: 450px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  border: none;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btnPrimary {
+  background: #0984e3;
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  background: #0769b5;
+}
+
+.btnSecondary {
+  background: #fff;
+  color: #1a1a2e;
+  border: 2px solid #dfe6e9;
+}
+
+.btnSecondary:hover {
+  border-color: #0984e3;
+  color: #0984e3;
+}
+
+.funFact {
+  margin-top: 3rem;
+  padding: 1.25rem 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  max-width: 480px;
+}
+
+.funFactLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0984e3;
+  margin-bottom: 0.4rem;
+}
+
+.funFactText {
+  font-size: 0.88rem;
+  color: #636e72;
+  line-height: 1.5;
+}
