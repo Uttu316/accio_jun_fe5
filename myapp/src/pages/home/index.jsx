@@ -2,12 +2,16 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { FiShoppingBag, FiTruck, FiShield, FiSend } from "react-icons/fi";
 import styles from "./home.module.css";
+import { useNavigate } from "react-router";
+import PageWrapper from "../../components/pageWrapper";
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const onShopNow = () => {
+    navigate("/store");
+  };
   return (
-    <div>
-      <Header title="ShopEase" />
-
+    <PageWrapper title="ShopEase">
       <section className={styles.hero}>
         <div className={styles.heroOverlay}></div>
         <div className={styles.heroContent}>
@@ -16,7 +20,7 @@ const HomePage = () => {
             Discover premium products curated just for you. From fashion to
             electronics, find everything you need at unbeatable prices.
           </p>
-          <button className={styles.heroBtn}>
+          <button onClick={onShopNow} className={styles.heroBtn}>
             <FiShoppingBag /> Shop Now
           </button>
         </div>
@@ -118,9 +122,7 @@ const HomePage = () => {
           </button>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

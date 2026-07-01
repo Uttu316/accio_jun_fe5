@@ -1,13 +1,10 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiHeart, FiGlobe, FiUsers, FiAward } from "react-icons/fi";
 import styles from "./about.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const AboutPage = () => {
   return (
-    <div>
-      <Header title="ShopEase" />
-
+    <PageWrapper title="ShopEase">
       <section className={styles.banner}>
         <div className={styles.bannerOverlay}></div>
         <div className={styles.bannerContent}>
@@ -151,9 +148,7 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

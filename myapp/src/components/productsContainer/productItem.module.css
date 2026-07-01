@@ -118,3 +118,30 @@
 .cartBtn:active {
   transform: scale(0.97);
 }
+
+.removecartBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: salmon;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+}
+
+.removecartBtn:hover {
+  background: rgb(213, 113, 101);
+}
+
+.removecartBtn:active {
+  transform: scale(0.97);
+}

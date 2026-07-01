@@ -1,14 +1,11 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiHome, FiShoppingBag } from "react-icons/fi";
 import { GiGhost } from "react-icons/gi";
 import styles from "./notfound.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const NotFoundPage = () => {
   return (
-    <div>
-      <Header title="ShopEase" />
-
+    <PageWrapper title="ShopEase">
       <section className={styles.container}>
         <div className={styles.errorCode}>404</div>
         <div className={styles.ghost}>
@@ -35,9 +32,7 @@ const NotFoundPage = () => {
           </p>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

@@ -1,5 +1,3 @@
-import Header from "../../components/header";
-import Footer from "../../components/footer";
 import { FiMail, FiPhone, FiMapPin, FiClock, FiSend } from "react-icons/fi";
 import {
   FaFacebookF,
@@ -8,12 +6,11 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import styles from "./contact.module.css";
+import PageWrapper from "../../components/pageWrapper";
 
 const ContactPage = () => {
   return (
-    <div>
-      <Header title="ShopEase" />
-
+    <PageWrapper title="ShopEase">
       <section className={styles.banner}>
         <div className={styles.bannerOverlay}></div>
         <div className={styles.bannerContent}>
@@ -153,9 +150,7 @@ const ContactPage = () => {
           alt="Our location"
         />
       </section>
-
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 

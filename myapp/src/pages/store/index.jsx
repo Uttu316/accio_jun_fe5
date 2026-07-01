@@ -1,14 +1,11 @@
-import Footer from "../../components/footer";
-import Header from "../../components/header";
+import PageWrapper from "../../components/pageWrapper";
 import ProductsContainer from "../../components/productsContainer";
 
 const StorePage = () => {
   return (
-    <div>
-      <Header title="My Store" />
+    <PageWrapper title="My Store">
       <ProductsContainer />
-      <Footer />
-    </div>
+    </PageWrapper>
   );
 };
 
